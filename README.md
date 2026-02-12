@@ -70,6 +70,30 @@ This project achieves — and significantly exceeds — the **High Ceiling** sco
 
 ## Screenshots
 
+### Welcome — First Launch
+
+> New users are greeted with an interactive 8-step onboarding tour.
+
+![Welcome to SheetForge — onboarding splash](public/screenshot-onboarding-welcome.png)
+
+### Onboarding — Your Toolbar
+
+> Step 2 walks through formatting, undo/redo, import/export, and theme toggling.
+
+![Onboarding tour — toolbar overview](public/screenshot-onboarding-1.png)
+
+### Onboarding — Powerful Formulas
+
+> Step 4 introduces formulas: type `=` to begin, try `=SUM(A1:A3)`, click cells for auto-references.
+
+![Onboarding tour — formulas](public/screenshot-onboarding-4.png)
+
+### Onboarding — Navigate Like a Pro
+
+> Step 5 shows keyboard shortcuts for fast spreadsheet navigation.
+
+![Onboarding tour — keyboard shortcuts](public/screenshot-onboarding-2.png)
+
 ### Formulas & Data — Light Mode
 
 > Cell B5 selected showing `=SUM(B2:B4)` in the formula bar, with computed totals across Revenue, Cost, and Profit columns.
@@ -81,18 +105,6 @@ This project achieves — and significantly exceeds — the **High Ceiling** sco
 > Same dataset rendered in dark mode, demonstrating the full theming system with `next-themes`.
 
 ![SheetForge with formulas and data in dark mode](public/screenshot-dark.png)
-
-### Onboarding Tour — Step 2: Toolbar
-
-> Interactive 8-step onboarding tour highlighting key features. Here: the formatting toolbar walkthrough.
-
-![Onboarding tour — toolbar step](public/screenshot-onboarding-1.png)
-
-### Onboarding Tour — Step 5: Navigation
-
-> Keyboard shortcuts reference shown during the "Navigate Like a Pro" onboarding step.
-
-![Onboarding tour — navigation step](public/screenshot-onboarding-2.png)
 
 ---
 
