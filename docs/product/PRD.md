@@ -10,7 +10,7 @@
 | **Author** | Product Manager Agent (01-product-manager) |
 | **Last Updated** | 2026-02-12 |
 | **Status** | Approved — All stages audit-complete (Stages 0–6) |
-| **Assignment** | Stanford TECH 42: Vibe Coding — Assignment 2: The Clone |
+| **Assignment** | Stanford TECH 42: Vibe Coding — Assignment 2: Build a Spreadsheet |
 | **Platform** | Google Antigravity IDE (Web) |
 
 ### Agent Review Chain
@@ -1618,7 +1618,7 @@ Focus → TC-A03
 
 ### B. References
 
-- Stanford TECH 42: Vibe Coding — Assignment 2: The Clone (ASSIGNMENT.md)
+- Stanford TECH 42: Vibe Coding — Assignment 2: Build a Spreadsheet (ASSIGNMENT.md)
 - Product Manager PRD Template (internal agent reference)
 - Documentation Evaluation Checklist (internal agent reference)
 - QA Test Planning Framework (internal agent reference)
