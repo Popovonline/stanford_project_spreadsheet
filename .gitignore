@@ -49,5 +49,6 @@ next-env.d.ts
 /mcp-apps/
 
 # Assignment submission (private)
+/docs/product/ASSIGNMENT.md
 /docs/assignment_letter.pdf
 /docs/assignment_letter.html
