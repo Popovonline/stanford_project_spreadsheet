@@ -207,7 +207,7 @@ const SpreadsheetCell = React.memo(function SpreadsheetCell({
     const hasFormula = !!cell?.formula;
     const tooltip = hasFormula ? formulaTooltip(cell!.formula!) : '';
 
-    // Focus input when editing
+    // Focus input when editing (also re-focus after point-and-click formula appends)
     useEffect(() => {
         if (isEditing && inputRef.current) {
             inputRef.current.focus();
@@ -215,7 +215,7 @@ const SpreadsheetCell = React.memo(function SpreadsheetCell({
             const len = inputRef.current.value.length;
             inputRef.current.setSelectionRange(len, len);
         }
-    }, [isEditing]);
+    }, [isEditing, editBuffer || '']);
 
     const handleClick = useCallback((e: React.MouseEvent) => {
         if (e.shiftKey && !isEditing) {
@@ -712,16 +712,18 @@ export default function Grid() {
                     case 'v':
                         if (s.mode !== 'EDITING') {
                             e.preventDefault();
-                            // Try reading from system clipboard
-                            navigator.clipboard.readText().then(text => {
-                                if (text && !stateRef.current.clipboard) {
-                                    dispatch({ type: 'PASTE', externalText: text });
-                                } else {
-                                    dispatch({ type: 'PASTE' });
-                                }
-                            }).catch(() => {
+                            // Prioritize internal clipboard (sync) over system clipboard (async)
+                            if (stateRef.current.clipboard) {
                                 dispatch({ type: 'PASTE' });
-                            });
+                            } else {
+                                navigator.clipboard.readText().then(text => {
+                                    if (text) {
+                                        dispatch({ type: 'PASTE', externalText: text });
+                                    }
+                                }).catch(() => {
+                                    // Clipboard API not available — no-op
+                                });
+                            }
                         }
                         return;
                 }

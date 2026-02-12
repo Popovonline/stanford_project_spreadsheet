@@ -318,11 +318,18 @@ export function spreadsheetReducer(
             const col = clamp(action.col, 0, TOTAL_COLUMNS - 1);
             const row = clamp(action.row, 0, TOTAL_ROWS - 1);
 
-            // Point-and-click formula entry (FR-116): if editing a formula,
-            // insert cell reference instead of committing and navigating away.
+            // Point-and-click formula entry (FR-116): if editing a formula AND
+            // the buffer ends with an operator/open-paren/comma/equals, append
+            // the clicked cell reference. Otherwise commit the formula.
             if (state.mode === 'EDITING' && state.editBuffer.startsWith('=')) {
-                const ref = colIndexToLetter(col) + (row + 1);
-                return { ...state, editBuffer: state.editBuffer + ref };
+                const buf = state.editBuffer;
+                const lastChar = buf[buf.length - 1];
+                const expectsRef = '=+-*/^(,'.includes(lastChar);
+                if (expectsRef) {
+                    const ref = colIndexToLetter(col) + (row + 1);
+                    return { ...state, editBuffer: buf + ref };
+                }
+                // Formula is complete — fall through to commit + navigate
             }
 
             let intermediate = state;

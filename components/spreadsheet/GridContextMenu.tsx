@@ -29,15 +29,18 @@ export default function GridContextMenu({ children }: { children: React.ReactNod
     };
 
     const handlePaste = () => {
-        navigator.clipboard.readText().then(text => {
-            if (text && !state.clipboard) {
-                dispatch({ type: 'PASTE', externalText: text });
-            } else {
-                dispatch({ type: 'PASTE' });
-            }
-        }).catch(() => {
+        // Prioritize internal clipboard (sync) over system clipboard (async)
+        if (state.clipboard) {
             dispatch({ type: 'PASTE' });
-        });
+        } else {
+            navigator.clipboard.readText().then(text => {
+                if (text) {
+                    dispatch({ type: 'PASTE', externalText: text });
+                }
+            }).catch(() => {
+                // Clipboard API not available — no-op
+            });
+        }
     };
 
     const handleDelete = () => {
