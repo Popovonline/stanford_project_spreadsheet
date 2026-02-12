@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <em>Stanford University · AI-Assisted Development Course · Assignment 2: "The Clone — Build a Spreadsheet"</em>
+  <em>Stanford University · TECH 42: Vibe Coding — Building Software in Conversation with AI · Assignment 2: "The Clone — Build a Spreadsheet"</em>
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 
 ## About the Project
 
-**SheetForge** is a fully-featured spreadsheet application built as part of a Stanford University AI-assisted development course. The assignment objective is to clone the core functionality of a spreadsheet (like Google Sheets or Excel) using AI as a coding partner — exploring how strategic prompting, iterative development, and human–AI collaboration shape the final product.
+**SheetForge** is a fully-featured spreadsheet application built as part of Stanford University's TECH 42: Vibe Coding course. The assignment objective is to clone the core functionality of a spreadsheet (like Google Sheets or Excel) using AI as a coding partner — exploring how strategic prompting, iterative development, and human–AI collaboration shape the final product.
 
 This project achieves — and significantly exceeds — the **High Ceiling** scope tier:
 
@@ -287,7 +287,7 @@ sheetforge/
 │   │   ├── PRD.md                    # Product Requirements Document (v2.1.0)
 │   │   ├── ARCHITECTURE_REVIEW.md    # Technical architecture analysis
 │   │   ├── QA_REVIEW.md              # Test plan audit & recommendations
-│   │   ├── ASSIGNMENT.md             # Stanford assignment brief
+│   │   ├── ASSIGNMENT.md             # TECH 42 assignment brief
 │   │   └── visual_design_spec.md     # Visual design specification (Stages 4–6)
 │   └── testing.md                    # Auto-test documentation & conventions
 │
@@ -357,7 +357,7 @@ SheetForge was developed using a team of **19 specialized AI agents** covering r
 | **Architecture Review** | [docs/product/ARCHITECTURE_REVIEW.md](docs/product/ARCHITECTURE_REVIEW.md) | Pre-build technical architecture analysis |
 | **QA Review** | [docs/product/QA_REVIEW.md](docs/product/QA_REVIEW.md) | Test plan audit & recommendations |
 | **Visual Design Spec** | [docs/product/visual_design_spec.md](docs/product/visual_design_spec.md) | UI design specifications for Stages 4–6 |
-| **Assignment Brief** | [docs/product/ASSIGNMENT.md](docs/product/ASSIGNMENT.md) | Stanford course assignment description |
+| **Assignment Brief** | [docs/product/ASSIGNMENT.md](docs/product/ASSIGNMENT.md) | TECH 42 course assignment description |
 | **Test Documentation** | [docs/testing.md](docs/testing.md) | Test suite documentation & conventions |
 | **Developer Rules** | [CLAUDE.md](CLAUDE.md) | Coding conventions & project rules |
 | **Contributing** | [CONTRIBUTING.md](CONTRIBUTING.md) | Setup, development workflow & PR guidelines |

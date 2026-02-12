@@ -23,7 +23,7 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "SheetForge — AI-Built Spreadsheet",
-  description: "A web-based spreadsheet built with AI-assisted development for Stanford CS Assignment 2",
+  description: "A web-based spreadsheet built with AI-assisted development for Stanford TECH 42: Vibe Coding",
 };
 
 export default function RootLayout({
