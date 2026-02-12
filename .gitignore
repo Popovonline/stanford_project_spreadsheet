@@ -47,3 +47,7 @@ next-env.d.ts
 /agents/
 /docs/agents-ecosystem/
 /mcp-apps/
+
+# Assignment submission (private)
+/docs/assignment_letter.pdf
+/docs/assignment_letter.html
